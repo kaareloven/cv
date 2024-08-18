@@ -30,4 +30,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .out # Bruker '.next' som kilde for GitHub Pages
+          publish_dir: .out # Bruker '.out' som kilde for GitHub Pages
