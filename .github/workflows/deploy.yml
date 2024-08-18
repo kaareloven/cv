@@ -16,18 +16,19 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.17.0' # Bruk Node.js versjon 18.17.0 eller høyere
+          node-version: '18.17.0'
 
       - name: Install dependencies
         run: npm install
-        # Installerer alle avhengigheter for prosjektet ditt
 
       - name: Build the project
         run: npm run build
-        # Bygger prosjektet, som inkluderer generering av statiske sider hvis aktuelt
+
+      - name: Move files to correct directory
+        run: mv .out/* .out/_next* . # Flytter innholdet fra .next til rotmappen hvis nødvendig
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .out # Bruker '.out' som kilde for GitHub Pages
+          publish_dir: .
