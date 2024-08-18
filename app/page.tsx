@@ -1,9 +1,17 @@
-import FlickeringGrid from '@/components/magicui/flickering-grid';
 import Particles from '@/components/magicui/particles';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import profilePic from '/public/profile.jpeg';
-import Link from 'next/link';
+import NTNUlogo from '/public/logo_ntnu.svg';
+import kateter from '/public/kateter.png';
+import forsvaret from '/public/forsvaret.svg';
+import esso from '/public/Esso_textlogo.svg';
+import ASGlogo from '/public/ASGlogo.png';
+import Vestland from '/public/Vestland.svg';
+import UKA from '/public/UKAlogo.png';
+import NTNUItennis from '/public/logo_ntnui_tennis.png';
+import Janus from '/public/janus.jpg';
+import Omega from '/public/Omega-logo.png';
 import {
   Card,
   CardContent,
@@ -17,7 +25,7 @@ export default function Home() {
   return (
     <main>
       <div className="relative h-screen w-screen overflow-hidden">
-        <Particles color="#000000" quantity={300} />
+        <Particles color="#000000" quantity={400} />
         <div className="absolute inset-0">
           <div className="flex w-auto h-auto m-5 justify-between">
             <h1 className="flex text-2xl ml-2">
@@ -56,10 +64,12 @@ export default function Home() {
         <Card className="flex-1">
           <CardHeader>
             <CardTitle>💼 Arbeidserfaring</CardTitle>
-            <CardDescription>Tidligere arbeidsforhold</CardDescription>
+            <CardDescription>
+              Tidligere og nåværende arbeidsforhold
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-4">
+            <ul className="space-y-8">
               <li className="flex justify-between items-center">
                 <div className="flex items-center space-x-4">
                   <svg
@@ -119,7 +129,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <h3 className="text-lg font-semibold">Norbits</h3>
-                    <p className="text-sm text-gray-600">Utvikler</p>
+                    <p className="text-md text-gray-600">Utvikler</p>
                     <p className="text-sm text-gray-600">
                       Sommerjobb 2023 & 2024
                     </p>
@@ -127,16 +137,168 @@ export default function Home() {
                 </div>
                 <Button variant="outline">Les mer</Button>
               </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={NTNUlogo}
+                    alt="Company A Logo"
+                    width={100}
+                    height={100}
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold">NTNU</h3>
+                    <p className="text-md text-gray-600">Læringsassistent</p>
+                    <p className="text-sm text-gray-600">2022.08-2023.06</p>
+                  </div>
+                </div>
+                <Button variant="outline">Les Mer</Button>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={kateter}
+                    alt="Company A Logo"
+                    width={100}
+                    height={100}
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold">Kateter</h3>
+                    <p className="text-md text-gray-600">Kursutvikler</p>
+                    <p className="text-sm text-gray-600">Sommerjobb 2022</p>
+                  </div>
+                </div>
+                <Button variant="outline">Les Mer</Button>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={forsvaret}
+                    alt="Company A Logo"
+                    width={50}
+                    height={50}
+                  />
+                  <div className="pl-12">
+                    <h3 className="text-lg font-semibold">Forsvaret</h3>
+                    <p className="text-md text-gray-600">Visekorporal</p>
+                    <p className="text-sm text-gray-600">2019.08-2021.06</p>
+                  </div>
+                </div>
+                <Button variant="outline">Les Mer</Button>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={esso}
+                    alt="Company A Logo"
+                    width={50}
+                    height={50}
+                  />
+                  <div className="pl-12">
+                    <h3 className="text-lg font-semibold">
+                      HMV Servicestasjon
+                    </h3>
+                    <p className="text-md text-gray-600">Servicemedarbeider</p>
+                    <p className="text-sm text-gray-600">2015.06-2018.08</p>
+                  </div>
+                </div>
+                <Button variant="outline">Les Mer</Button>
+              </li>
             </ul>
           </CardContent>
         </Card>
         <Card className="flex-1">
           <CardHeader>
             <CardTitle>🎓 Utdanning</CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            <CardDescription>Skoler og instutisjoner</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>Card Content</p>
+            <ul className="space-y-8">
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={NTNUlogo}
+                    alt="Company A Logo"
+                    width={100}
+                    height={100}
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold">NTNU</h3>
+                    <p className="text-md text-gray-600">
+                      Industriell økonomi og teknologiledelse
+                    </p>
+                    <p className="text-sm text-gray-600">2022.08-d.d.</p>
+                  </div>
+                </div>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={NTNUlogo}
+                    alt="Company A Logo"
+                    width={100}
+                    height={100}
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold">NTNU</h3>
+                    <p className="text-md text-gray-600">
+                      Kybernetikk og robotikk
+                    </p>
+                    <p className="text-sm text-gray-600">2021.08-2022.08</p>
+                  </div>
+                </div>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={forsvaret}
+                    alt="Company A Logo"
+                    width={50}
+                    height={50}
+                  />
+                  <div className="pl-12">
+                    <h3 className="text-lg font-semibold">Forsvaret</h3>
+                    <p className="text-md text-gray-600">Førstegangstjeneste</p>
+                    <p className="text-sm text-gray-600">2021.08-2022.08</p>
+                  </div>
+                </div>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={ASGlogo}
+                    alt="Company A Logo"
+                    width={70}
+                    height={70}
+                  />
+                  <div className="pl-7">
+                    <h3 className="text-lg font-semibold">
+                      Albert Schweitzer Gymnasium
+                    </h3>
+                    <p className="text-md text-gray-600">
+                      Utveksling 2.året Videregående
+                    </p>
+                    <p className="text-sm text-gray-600">2021.08-2022.08</p>
+                  </div>
+                </div>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={Vestland}
+                    alt="Company A Logo"
+                    width={45}
+                    height={45}
+                  />
+                  <div className="pl-14">
+                    <h3 className="text-lg font-semibold">Voss Gymmnas</h3>
+                    <p className="text-md text-gray-600">
+                      Studiespesialisering
+                    </p>
+                    <p className="text-sm text-gray-600">2015.08-2018.06</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </CardContent>
         </Card>
         <Card className="flex-1">
@@ -145,7 +307,88 @@ export default function Home() {
             <CardDescription>Frivillighet og studentverv</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>Card Content</p>
+            <ul className="space-y-8">
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={NTNUItennis}
+                    alt="Company A Logo"
+                    width={50}
+                    height={50}
+                  />
+                  <div className="pl-8">
+                    <h3 className="text-lg font-semibold">NTNUI Tennis</h3>
+                    <p className="text-md text-gray-600">
+                      Web-ansvarlig & Styremedlem
+                    </p>
+                    <p className="text-sm text-gray-600">2024.01-d.d.</p>
+                  </div>
+                </div>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={UKA}
+                    alt="Company A Logo"
+                    width={80}
+                    height={80}
+                  />
+                  <div className="pl-1">
+                    <h3 className="text-lg font-semibold">UKA</h3>
+                    <p className="text-md text-gray-600">
+                      Nestsjef i UKEmassasjen
+                    </p>
+                    <p className="text-sm text-gray-600">UKA-23</p>
+                    <p className="text-md text-gray-600">
+                      Massør i UKEmassasjen
+                    </p>
+                    <p className="text-sm text-gray-600">UKA-21</p>
+                  </div>
+                </div>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={Janus}
+                    alt="Company A Logo"
+                    width={60}
+                    height={60}
+                  />
+                  <div className="pl-6">
+                    <h3 className="text-lg font-semibold">
+                      Janus Linjeforening
+                    </h3>
+                    <p className="text-md text-gray-600">
+                      Bryggemedlem i Indøl
+                    </p>
+                    <p className="text-sm text-gray-600">2022.09-2024.08</p>
+                  </div>
+                </div>
+              </li>
+              <li className="flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src={Omega}
+                    alt="Company A Logo"
+                    width={50}
+                    height={50}
+                  />
+                  <div className="pl-8">
+                    <h3 className="text-lg font-semibold">
+                      Sanctus Omega Broderskap
+                    </h3>
+                    <p className="text-md text-gray-600">
+                      Styremedlem i Fadderkomiteen
+                    </p>
+                    <p className="text-sm text-gray-600">2022.01-2022.10</p>
+                    <p className="text-md text-gray-600">
+                      Styremedlem i Arrangementskomiteen
+                    </p>
+                    <p className="text-sm text-gray-600">2021.08-2023.08</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </CardContent>
         </Card>
       </div>
