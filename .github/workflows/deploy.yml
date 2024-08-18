@@ -3,16 +3,15 @@ name: Deploy Next.js app to GitHub Pages
 on:
   push:
     branches:
-      - main # Workflowen kjører hver gang det er en push til main-branchen
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Kjør jobben på en Ubuntu-server
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        # Sjekker ut koden fra repositoryet ditt
 
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -23,13 +22,6 @@ jobs:
         run: npm install
         # Installerer alle avhengigheter for prosjektet ditt
 
-      - name: Build and export
-        run: npm run build && npm run export
-        # Bygger prosjektet og eksporterer det til en statisk nettside
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-        # Distribuerer de statiske filene til GitHub Pages fra 'out' mappen
+      - name: Build the project
+        run: npm run build
+        # By
