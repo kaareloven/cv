@@ -13,6 +13,14 @@ import NTNUItennis from '/public/logo_ntnui_tennis.png';
 import Janus from '/public/janus.jpg';
 import Omega from '/public/Omega-logo.png';
 import BlurFade from '@/components/magicui/blur-fade';
+import python from '/public/python-logo.png';
+import Cpluslogo from '/public/C++-logo.png';
+import Csharplogo from '/public/Csharp-logo.png';
+import Javascript from '/public/JS-logo.png';
+import Reactlogo from '/public/React-logo.png';
+import HTMLlogo from '/public/html-logo.png';
+import CSSlogo from '/public/css-logo.png';
+import SQLlogo from '/public/database.png';
 import {
   Card,
   CardContent,
@@ -22,7 +30,6 @@ import {
 } from '@/components/ui/card';
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -31,6 +38,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
+import Meteors from '@/components/magicui/meteors';
 
 export default function Home() {
   return (
@@ -64,18 +72,20 @@ export default function Home() {
               </BlurFade>
             </div>
             <div className="basis-1/2 flex justify-center items-center">
-              <Image
-                src={profilePic}
-                alt="Picture of the author"
-                width={250}
-                height={250}
-                className="rounded-full shadow-lg"
-              />
+              <BlurFade delay={0.75} inView>
+                <Image
+                  src={profilePic}
+                  alt="Picture of the author"
+                  width={250}
+                  height={250}
+                  className="rounded-full shadow-lg"
+                />
+              </BlurFade>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 lg:p-10 p-2 bg-gray-100 rounded-t-3xl justify-between">
+      <div className="flex flex-col lg:flex-row gap-6 lg:p-10 p-2 bg-gray-100 rounded-3xl justify-between">
         <BlurFade delay={0.3} inView>
           <Card className="flex-1 w-full">
             <CardHeader>
@@ -333,10 +343,25 @@ export default function Home() {
                       <AlertDialogContent>
                         <AlertDialogHeader>
                           <AlertDialogTitle>
-                            NTNU - Læringsassistent
+                            Forsvaret - Visekorporal
                           </AlertDialogTitle>
                         </AlertDialogHeader>
-                        <AlertDialogDescription></AlertDialogDescription>
+                        <AlertDialogDescription>
+                          <p className="mb-2">
+                            Jobbet 2 år som vervet grenader i Stormeskadron 3 i
+                            Panserbataljonen
+                          </p>
+                          <p className="mb-2">
+                            Skytter på CV90 Stormpanservogn med ansvar for
+                            vognas vedlikehold og beredskap, samt
+                            sanitetsansvarlig i vogntroppen.
+                          </p>
+                          <p>
+                            Var en del av Norges bidrag til Natos fredsbevarende
+                            styrker i de baltiske landene (EFP 6) høsten 2019.
+                            Utstasjonert i Litauen over en 6 måneders periode.
+                          </p>
+                        </AlertDialogDescription>
                         <AlertDialogFooter>
                           <AlertDialogCancel>Tilbake</AlertDialogCancel>
                         </AlertDialogFooter>
@@ -372,10 +397,19 @@ export default function Home() {
                       <AlertDialogContent>
                         <AlertDialogHeader>
                           <AlertDialogTitle>
-                            NTNU - Læringsassistent
+                            HMV Servicestasjon - Servicemedarbeider
                           </AlertDialogTitle>
                         </AlertDialogHeader>
-                        <AlertDialogDescription></AlertDialogDescription>
+                        <AlertDialogDescription>
+                          <p className="mb-2">
+                            Fast stilling annenhver helg, samt ekstra
+                            kveldsvakter ved behov og i skoleferier.
+                          </p>
+                          <p>
+                            Ansvarlige vakter som bestod av ekspedering,
+                            matlaging, renhold og mer.
+                          </p>
+                        </AlertDialogDescription>
                         <AlertDialogFooter>
                           <AlertDialogCancel>Tilbake</AlertDialogCancel>
                         </AlertDialogFooter>
@@ -578,6 +612,87 @@ export default function Home() {
             </CardContent>
           </Card>
         </BlurFade>
+      </div>
+      <div className="flex flex-col md:flex-row w-full bg-gray-700">
+        <div className="md:w-3/5 p-4 md:p-10">
+          <BlurFade delay={0.25} inView>
+            <p className="text-white text-2xl font-semibold">IT-ferdigheter</p>
+          </BlurFade>
+          <BlurFade delay={0.5} inView>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 ml-4">
+              <div className="flex items-center space-x-2">
+                <Image src={python} alt="HTML Icon" width={25} height={25} />
+                <p className="text-white text-lg">Python</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Image src={Cpluslogo} alt="HTML Icon" width={25} height={25} />
+                <p className="text-white text-lg">C++</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={Csharplogo}
+                  alt="HTML Icon"
+                  width={25}
+                  height={25}
+                />
+                <p className="text-white text-lg">C#</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Image
+                  src={Javascript}
+                  alt="HTML Icon"
+                  width={25}
+                  height={25}
+                />
+                <p className="text-white text-lg">Javascript</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Image src={Reactlogo} alt="HTML Icon" width={25} height={25} />
+                <p className="text-white text-lg">React</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Image src={HTMLlogo} alt="HTML Icon" width={25} height={25} />
+                <p className="text-white text-lg">HTML</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Image src={CSSlogo} alt="HTML Icon" width={25} height={25} />
+                <p className="text-white text-lg">CSS</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Image src={SQLlogo} alt="HTML Icon" width={25} height={25} />
+                <p className="text-white text-lg">SQL</p>
+              </div>
+            </div>
+          </BlurFade>
+        </div>
+
+        <div className="md:w-2/5 flex flex-col p-4 md:p-10">
+          <BlurFade delay={0.25} inView>
+            <p className="text-white text-2xl font-semibold">Språkkunnskaper</p>
+          </BlurFade>
+          <BlurFade delay={0.5} inView>
+            <ul className="ml-4 space-y-4 py-3">
+              <li className="text-white text-lg">
+                <span className="text-2xl">🇳🇴</span> Norsk - morsmål
+              </li>
+              <li className="text-white text-lg">
+                <span className="text-2xl">🇬🇧</span> Engelsk - flytende
+              </li>
+              <li className="text-white text-lg">
+                <span className="text-2xl">🇩🇪</span> Tysk - nivå B1
+              </li>
+            </ul>
+          </BlurFade>
+        </div>
+      </div>
+      <div className="relative flex flex-col justify-center items-center w-full bg-white h-72 my-10 overflow-hidden">
+        <Meteors number={30} />
+        <p className="text-center text-6xl font-semibold text-gray-600 mb-4">
+          Ta gjerne kontakt for en prat!🚀
+        </p>
+        <p className="mb-2 text-xl">☎️ +47 98 47 41 71 </p>
+        <p className="mb-2 text-xl">📬 kaareloven@gmail.com</p>
+        <p></p>
       </div>
     </main>
   );
