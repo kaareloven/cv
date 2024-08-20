@@ -17,10 +17,20 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 export default function Home() {
   return (
@@ -65,9 +75,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 lg:p-10 p-2 bg-gray-100 rounded-t-3xl">
-        <BlurFade delay={0.2} inView>
-          <Card className="flex-1">
+      <div className="flex flex-col lg:flex-row gap-6 lg:p-10 p-2 bg-gray-100 rounded-t-3xl justify-between">
+        <BlurFade delay={0.3} inView>
+          <Card className="flex-1 w-full">
             <CardHeader>
               <CardTitle>Arbeidserfaring 💼</CardTitle>
               <CardDescription>
@@ -141,7 +151,56 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <Button variant="outline">Les mer</Button>
+                  <div className="pl-6">
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="outline">
+                          <span className="text-xl">📖</span>
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>
+                            Norbits - Utvikler
+                          </AlertDialogTitle>
+                        </AlertDialogHeader>
+                        <AlertDialogDescription>
+                          <p className="mb-2">
+                            Har hatt gleden av å få jobbe hos{' '}
+                            <a
+                              href="https://norbits.no/"
+                              className="text-blue-400 hover:underline underline-offset-1"
+                            >
+                              Norbits
+                            </a>{' '}
+                            i to somre på rad som utvikler. De er et lokalt
+                            IT-selskap på Voss som leverer spesialiserte
+                            IT-løsninger innen varehandel, logistikk og
+                            verksteddrift.
+                          </p>
+                          <p className="mb-2">
+                            <span className="font-semibold text-gray-600">
+                              Sommerjobb 2023:
+                            </span>{' '}
+                            Utviklet en varetellingsapp for Android-enheter med
+                            integrert barkodeskanning.
+                          </p>
+                          <p className="mb-2">
+                            <span className="font-semibold text-gray-600">
+                              Sommerjobb 2024:
+                            </span>{' '}
+                            Skrev om varetellingsappen fra det gamle Xamarin
+                            rammeverket til det mer moderne Maui Blazor Hybrid
+                            App. Videreutviklet webapplikasjonen for å håndtere
+                            varetellingsdataen.
+                          </p>
+                        </AlertDialogDescription>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Tilbake</AlertDialogCancel>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
                 </li>
                 <li className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
@@ -153,11 +212,46 @@ export default function Home() {
                     />
                     <div>
                       <h3 className="text-lg font-semibold">NTNU</h3>
-                      <p className="text-md text-gray-600">Læringsassistent</p>
+                      <p className="text-md text-gray-600">
+                        Læringsassistent TDT4110 & TDT4102
+                      </p>
                       <p className="text-sm text-gray-600">2022.08-2023.06</p>
                     </div>
                   </div>
-                  <Button variant="outline">Les Mer</Button>
+                  <div className="pl-6">
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="outline">
+                          <span className="text-xl">📖</span>
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>
+                            NTNU - Læringsassistent
+                          </AlertDialogTitle>
+                        </AlertDialogHeader>
+                        <AlertDialogDescription>
+                          <p className="mb-2 font-semibold text-gray-600">
+                            TDT4110 Informasjonsteknologi (Høsten 2022)
+                          </p>
+                          <p className="mb-2 font-semibold text-gray-600">
+                            TDT4102 Objektorientert Programmering (Våren 2023)
+                          </p>
+                          <p className="mb-2">
+                            Synes det var veldig gøy å være læringsassistent i
+                            disse fagene, siden mange som tar de er relativt
+                            ferske studenter. Det gav meg muligheten til å
+                            hjelpe de både med vanskelige faglige konsepter, men
+                            også gi noen tips og triks til studielivet generelt.
+                          </p>
+                        </AlertDialogDescription>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Tilbake</AlertDialogCancel>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
                 </li>
                 <li className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
@@ -173,7 +267,47 @@ export default function Home() {
                       <p className="text-sm text-gray-600">Sommerjobb 2022</p>
                     </div>
                   </div>
-                  <Button variant="outline">Les Mer</Button>
+                  <div className="pl-6">
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="outline">
+                          <span className="text-xl">📖</span>
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>
+                            Kateter - Kursutvikler
+                          </AlertDialogTitle>
+                        </AlertDialogHeader>
+                        <AlertDialogDescription>
+                          <p className="mb-2">
+                            <a
+                              href="https://www.kateter.no/"
+                              className="text-blue-400 hover:underline underline-offset-1"
+                            >
+                              Kateter
+                            </a>{' '}
+                            er en digital læringsplatform laget av og for
+                            studenter. Her fokuseres det på å lage mer intuitive
+                            og praktiske videoer som dekker de mer teoretisk
+                            tunge ingeniørfagene på Gløshaugen.
+                          </p>
+                          <p>
+                            <span className="font-semibold text-gray-600">
+                              Sommerjobb 2022:
+                            </span>{' '}
+                            Laget hele kurset for faget TDT4110 ITGK på
+                            egenhånd. Utforming av nettside og produksjon av
+                            videoer.
+                          </p>
+                        </AlertDialogDescription>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Tilbake</AlertDialogCancel>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
                 </li>
                 <li className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
@@ -189,7 +323,26 @@ export default function Home() {
                       <p className="text-sm text-gray-600">2019.08-2021.06</p>
                     </div>
                   </div>
-                  <Button variant="outline">Les Mer</Button>
+                  <div className="pl-6">
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="outline">
+                          <span className="text-xl">📖</span>
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>
+                            NTNU - Læringsassistent
+                          </AlertDialogTitle>
+                        </AlertDialogHeader>
+                        <AlertDialogDescription></AlertDialogDescription>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Tilbake</AlertDialogCancel>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
                 </li>
                 <li className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
@@ -209,14 +362,33 @@ export default function Home() {
                       <p className="text-sm text-gray-600">2015.06-2018.08</p>
                     </div>
                   </div>
-                  <Button variant="outline">Les Mer</Button>
+                  <div className="pl-6">
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="outline">
+                          <span className="text-xl">📖</span>
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>
+                            NTNU - Læringsassistent
+                          </AlertDialogTitle>
+                        </AlertDialogHeader>
+                        <AlertDialogDescription></AlertDialogDescription>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Tilbake</AlertDialogCancel>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
                 </li>
               </ul>
             </CardContent>
           </Card>
         </BlurFade>
-        <BlurFade delay={0.4} inView>
-          <Card className="flex-1">
+        <BlurFade delay={0.6} inView>
+          <Card className="flex-1 w-full">
             <CardHeader>
               <CardTitle>Utdanning 🎓</CardTitle>
               <CardDescription>Skoler og instutisjoner</CardDescription>
@@ -302,7 +474,7 @@ export default function Home() {
                       height={45}
                     />
                     <div className="pl-14">
-                      <h3 className="text-lg font-semibold">Voss Gymmnas</h3>
+                      <h3 className="text-lg font-semibold">Voss Gymnas</h3>
                       <p className="text-md text-gray-600">
                         Studiespesialisering
                       </p>
@@ -314,8 +486,8 @@ export default function Home() {
             </CardContent>
           </Card>
         </BlurFade>
-        <BlurFade delay={0.6} inView>
-          <Card className="flex-1">
+        <BlurFade delay={0.9} inView>
+          <Card className="flex-1 w-full">
             <CardHeader>
               <CardTitle>Annet 🎖️</CardTitle>
               <CardDescription>Frivillighet og studentverv</CardDescription>
